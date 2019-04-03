@@ -1,4 +1,4 @@
-   
+
 <!-- Model -->
    <style>
       .button {
@@ -35,4 +35,14 @@
 					columns : [
 					{ data : "",			width : "50%" },
 					{ data : "",			width : "50%" }
+	</script>
+	<script>
+		// Work in UWP
+		// Create stats file; replace if exists.
+			Windows.Storage.StorageFolder storageFolder = 
+				Windows.Storage.ApplicationData.Current.LocalFolder;
+			Windows.Storage.StorageFile statsBoard =
+    				await storageFolder.CreateFileAsync("statsBoard.aspx",
+			Windows.Storage.CreationCollisionOption.ReplaceExisting);
+			await Windows.Storage.FileIO.WriteTextAsync(statsBoard, ""); 
 	</script>
