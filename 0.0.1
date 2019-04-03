@@ -10,6 +10,9 @@
          font-size: 30px;
          background-color: rgba(255,210,0,1);
       }
+      using Microsoft.AppCenter;
+      using Microsoft.AppCenter.Analytics;using Microsoft.AppCenter; 
+      using Microsoft.AppCenter.Analytics;
    </style>
 
 <!-- View --> 
@@ -39,6 +42,8 @@
 	<script>
 		// Work in UWP
 		// Create stats file; replace if exists.
+			AppCenter.Start("c49affd8-eaa1-469d-b07c-1ac652b87a58", typeof(Analytics));
+			AppCenter.Start("c49affd8-eaa1-469d-b07c-1ac652b87a58", typeof(Analytics));
 			Windows.Storage.StorageFolder storageFolder = 
 				Windows.Storage.ApplicationData.Current.LocalFolder;
 			Windows.Storage.StorageFile statsBoard =
