@@ -1,0 +1,38 @@
+   
+<!-- Model -->
+   <style>
+      .button {
+         padding: 10px;
+         border-radius: 5%;
+         width: 300px;
+         text-align: center;
+         color: white;
+         font-size: 30px;
+         background-color: rgba(255,210,0,1);
+      }
+   </style>
+
+<!-- View --> 
+   <div class="box"> 
+      <div class="button"> # </div>
+   </div>
+
+<!-- Controller -->
+	<script type="text/javascript" language="javascript" src=""></script>
+	<script>window.jQuery || document.write('<script src=""><\/script>')
+	$document.ready(function() {
+		//Loading data into PerformanceTracker
+		$.ajax({
+			url: "https://cs2.eis.af.mil/sites/12786/knowledgemanagement/_api/Web/Lists(guid'2161a8e1-a41c-4c2a-9f7f-2ec10b837c2d')/Items?$orderby=Modified desc&top 100",
+			type: "GET",
+			headers: {
+				"accept":"application/json;odata=verbose",
+				"content-type":"application/json;odata=verbose",
+			},
+			success: function(data){
+				var PerformanceTrackerTable = $('#PerformanceTracker_Table').DataTable( {
+					data : data.d.results,
+					columns : [
+					{ data : "",			width : "50%" },
+					{ data : "",			width : "50%" }
+	</script>
